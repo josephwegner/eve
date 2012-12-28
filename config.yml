@@ -1,0 +1,6 @@
+safe: true
+lsi: false
+paginate: 10
+auto: true
+markdown: redcarpet
+

@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'entypo';
+    src: url('../fonts/entypo.eot');
+    src: url('../fonts/entypo.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/entypo.woff') format('woff'),
+         url('../fonts/entypo.ttf') format('truetype'),
+         url('../fonts/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+i {
+    font-family: 'entypo';
+    font-style: normal;
+    font-size: 40px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+div#header {
+    height: 75px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 8px #333;
+}
+
+#header h1#name {
+    font-size: 25px;
+    font-weight: normal;
+    position: absolute;
+    left: 20%;
+}
+
+#header ul#nav {
+    list-style-type: none;
+    position: absolute;
+    width: 45%;
+    right: 0;
+}
+
+#header ul#nav li {
+    display: inline-block;
+    margin-right: 5%;
+}
+
+#header ul#nav li a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+#body {
+    height: 100%;
+}
+
+/** Post **/
+div#post_info {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#main {
+    text-align: center;
+    overflow: hidden;
+    height: 100%;
+}
+
+#main #post {
+    text-align: justify;
+    width: 46%;
+    float: left;
+    margin: 0 2% 0 2%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#main #bible {
+    width: 46%;
+    float: left;
+    margin: 0 2% 0 2%;
+    text-align: justify;
+    height: 100%;
+    overflow: scroll;
+}

@@ -1,14 +1,13 @@
 ---
 blog_name: Eve
 post_header: Studies
-passage: John 3-4
 ---
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="/javascripts/post.js"></script>
     <!--[if lt IE 9]>
@@ -27,21 +26,11 @@ passage: John 3-4
     </div>
     <div id="body">
       <div id="post_info">
-        <h2>Living Out Loud</h2>
-        <span class="date">November 2nd, 2012"</span>
+        <h2>{{page.title}}</h2>
+        <span class="date">November 2nd, 2012</span>
       </div>
       <div id="main">
-        <div id="post">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus odio, sollicitudin quis volutpat non, rhoncus vel arcu. Fusce risus nulla, congue et scelerisque dictum, bibendum sit amet nulla. Mauris eros est, vulputate a pharetra et, posuere quis lectus. Nam quam felis, ullamcorper id congue sit amet, lobortis ut quam. Nunc eleifend rhoncus arcu id sodales. Suspendisse nisi ipsum, facilisis rutrum dictum ut, iaculis id tellus. Nulla varius ultricies elementum. Donec pulvinar fringilla vestibulum. Fusce dictum tortor varius purus rhoncus egestas ac sed leo. Curabitur a sapien sed enim sagittis bibendum quis sed odio. Nulla interdum lectus in nisl placerat auctor. Sed dui nisl, venenatis vel vulputate porttitor, sagittis a lorem.
-
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque et porta eros. Integer facilisis pharetra tristique. Vestibulum vel risus odio. Donec gravida augue consequat turpis porta sollicitudin eleifend metus adipiscing. Suspendisse gravida metus sed nibh aliquam dapibus. Cras in mauris in arcu lacinia semper.
-
-  Nulla commodo pellentesque massa non dictum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam at risus vitae urna commodo venenatis. In ultrices leo vitae ipsum euismod consequat. Curabitur nec arcu dolor. Nullam accumsan, elit ac gravida suscipit, lectus felis cursus augue, ac fringilla diam neque volutpat nulla. Quisque feugiat quam nec magna tincidunt eget venenatis eros ullamcorper.
-
-  Maecenas gravida hendrerit eros, et vestibulum purus lobortis in. Cras bibendum odio sed felis lobortis porta at quis lectus. Proin at ligula metus, pharetra tempor sem. Nam pharetra mollis auctor. Suspendisse potenti. Vestibulum mollis feugiat leo, sit amet blandit magna mattis pharetra. Fusce cursus augue sed purus rutrum elementum. Suspendisse posuere sagittis arcu in sagittis. Nulla ac dignissim augue. Mauris aliquet egestas elementum. Sed condimentum, felis at vulputate congue, erat odio consequat eros, et suscipit eros sapien nec massa. Duis eu velit non sem pulvinar luctus et nec est.
-
-  Morbi dolor sapien, semper ut congue ut, tincidunt eget sem. Proin ac nisi velit. Praesent erat ante, dapibus at pellentesque sit amet, scelerisque ac nisl. Ut imperdiet sodales malesuada. Maecenas sit amet odio ac dui commodo porta ac at eros. Pellentesque iaculis velit in justo mollis sagittis. Praesent imperdiet congue enim, vitae volutpat mi sodales ac. Etiam vehicula interdum faucibus. Curabitur semper pellentesque velit quis consequat. Donec urna nulla, cursus vitae viverra sit amet, fringilla suscipit nibh. Vestibulum arcu diam, aliquet eu volutpat vel, commodo non nisi. Pellentesque rhoncus, massa sit amet cursus mattis, nunc nulla vehicula ante, eu blandit risus odio ut odio. Morbi est quam, laoreet vitae dapibus eu, lacinia a odio.
-        </div>
+        <div id="post">{{ content }}</div>
         <div id="bible" data-passage="{{ page.passage }}"></div>
       </div>
     </div>

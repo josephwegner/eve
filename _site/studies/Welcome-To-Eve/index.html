@@ -26,15 +26,43 @@
         <span class="date">November 2nd, 2012</span>
       </div>
       <div id="main">
-        <div id="post"><p>I had jury duty the other day.  What that translates to is I had a whole day of <a href="https://twitter.com/Joe_Wegner/status/288812290910859265">forced free time</a>.  I had decided it would be a good idea to treat this time as a hackathon, and was inspired by a <a href="http://odem.chromeexperiments.com/8mEis2">Google+ demo</a> that allowed you to browse using gestures from your mobile phone.  The actual Google+ demo was pretty unexciting - it was very choppy, and not really an increase in usability at all.  But, cool nonetheless.</p>
+        <div id="post"><p>Welcome to Eve.  Eve is a new platform built specifically for bible studies.  At least in my experience, I find that my most common way of writing up a bible lesson is to walk through a passage verse-by-verse; explaining, asking questions, and finding references as I go.  Unfortunately, there isn&#39;t a good platform out there for properly displaying a written lesson with easy-to-access bible references.  Until Eve, at least.</p>
 
-<p><a href="John%204:43">In all reality</a>, using your mobile device as a controller for your desktop computer doesn&#39;t really have a place on the normal web - adding a new layer of abstraction isn&#39;t ever going to make things easier.  However, it does have an application in one place - gaming.  It&#39;s never been a secret that people prefer to control games with a controller rather than a mouse and keyboard.</p>
+<p>So here&#39;s how it works:</p>
 
-<p><code>passage=1 Timothy 1:10-3:5</code></p>
+<h2>Main Passage</h2>
 
-<p>So that&#39;s what I set out to do.  The end goal here is to create a library that people can use in the future, but for my forced hackathon I just wanted to create a proof of concept.  I didn&#39;t want to deal too heavily with designing a UI, so I chose the simplest game that might use a mobile controller - the keep-the-ball-on-the-tilty-thing game.</p>
+<p>Over on the right of this page you can see that there is a second block of text containing John 3-4.  This section is called the <code>main passage</code>.  This is supposed to contain the main block of text that you will be studying.  It is scrollable, and contains the entire passage so you can always see the context before and after the specific verses you are talking about.  Currently I&#39;m loading in two chapters (John 3-4), but you could load in any selection you&#39;d like.  John 3:14-19, John 3:2-4:15 - whatever you want.  You could even load in separate books, though that&#39;s probably a lot for one study.</p>
 
-<p>Check out <a href="http://mobile-interactive.herokuapp.com/">the demo</a> - it&#39;ll make the rest of this post make sense.  <strong>Make sure you&#39;re phone is on wifi.  There&#39;s a lot of websockets magic, which will likely suck up your available data.</strong>  This will also probably only work on chrome, both on the desktop and on your mobile.  You can try other browsers, but I don&#39;t promise any success.</p>
+<h2>Passage Links</h2>
+
+<p>Now, having that main passage to the right is pretty useless unless there&#39;s a good way to direct your readers to look at the specific sub-passage that you are referencing.  As you go through your study, you will want the user to be scrolling through the main passage so they can see what you are talking about.  To make this easy, there&#39;s a feature called <code>passage links</code>.  Here&#39;s one for <a href="John%203:16">you to try</a>.</p>
+
+<h2>Passage Embeds</h2>
+
+<p>Sometimes you may want to show the reader a reference to a passage that is somewhere else in the bible.  Perhaps there&#39;s a related verse in an entirely different book, but it would have been confusing to include all of that in the main passage.  To handle this, there&#39;s a feature called <code>passage embeds</code>.  A passage embed will load in the text from the passage into an inline section.  Here&#39;s an example, with 1 Corinthians 13:1-5</p>
+
+<p><code>passage=1 Corinthians 13:1-5</code></p>
+
+<h2>Markdown Powered</h2>
+
+<p>Eve uses a powerful tool called <a href="http://daringfireball.net/projects/markdown/">markdown</a>.  Markdown takes all of the difficult coding out of writing web documents, but still allows you to create great looking content.  There&#39;s some <a href="http://daringfireball.net/projects/markdown/syntax">pretty simple syntax</a> to mark up the most common HTML elements.</p>
+
+<h3>Eve-specific Markdown</h3>
+
+<p>In order to achieve the special eve formatting, there&#39;s some markdown overrides that we use.  They are as follows</p>
+
+<h4>Passage Links</h4>
+
+<p>Just like a regular link, you still use the standard [text](link) format, but for a passage link you change the value in the parantheses to the passage you want to show.  For instance:  </p>
+
+<p>[a verse](John 3:16).</p>
+
+<h4>Passage Embeds</h4>
+
+<p>Passage links use a little hack of the markdown code syntax.  Simply enough, you wrap <code>passage=&lt;passage name&gt;</code> in tildes.  It should look like this:  </p>
+
+<p>`passage=1 Corinthians 13:3-15`</p>
 </div>
         <div id="bible" data-passage="John 3-4"></div>
       </div>

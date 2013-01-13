@@ -6,6 +6,8 @@
 
 		//We have a main passage!
 		if(main_passage && main_passage !== "") {
+			$("#bible .box_head h2").text(main_passage);
+
 			var JSONP_URL = "//labs.bible.org/api/?passage="+encodeURIComponent(main_passage)+"&type=json&callback=_jsonp_main_passage_text&formatting=para";
 
 			var mp_script = $("<script>").attr('src', JSONP_URL);
@@ -14,9 +16,9 @@
 		}
 
 		//Bind to resize changes, so that we can keep scrollers in check
-		$("body").css('height', $(window).height() - 175);
+		$("body").css('height', $(window).height() - 95);
 		$(window).resize(function() {
-			$("body").css('height', $(window).height() - 175);
+			$("body").css('height', $(window).height() - 95);
 		});
 	
 		//Update all of the embeds
@@ -172,7 +174,7 @@ function _jsonp_main_passage_text(verses) {
 		bibleHTML += verse.text;
 	}
 
-	$("#bible").html(bibleHTML);
+	$("#bible .box_content").html(bibleHTML);
 	$("#bible a").remove();
 
 	fixVerseNumPositions($("#bible"));

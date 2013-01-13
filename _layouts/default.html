@@ -25,13 +25,19 @@ post_header: Studies
       </ul>
     </div>
     <div id="body">
-      <div id="post_info">
-        <h2>{{page.title}}</h2>
-        <span class="date">November 2nd, 2012</span>
-      </div>
       <div id="main">
-        <div id="post">{{ content }}</div>
-        <div id="bible" data-passage="{{ page.passage }}"></div>
+        <div id="post">
+          <div class="box_head">
+            <h2>{{page.title}}</h2><span class="date">{{ page.date | date_to_long_string }}</span>
+          </div>
+          <div class="box_content">{{content}}</div>
+        </div>
+        <div id="bible" data-passage="{{ page.passage }}">
+          <div class="box_head">
+            <h2 class="tcenter"></h2>
+          </div>
+          <div class="box_content"></div>
+        </div>
       </div>
     </div>
   </body>

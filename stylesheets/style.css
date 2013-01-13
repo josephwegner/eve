@@ -101,7 +101,6 @@ div#header {
 .box_head .date {
     color: #888888;
     font-size: .8em;
-    text-transform: lowercase;
 }
 
 #main {

@@ -28,7 +28,7 @@ post_header: Studies
       <div id="main">
         <div id="post">
           <div class="box_head">
-            <h2>{{page.title}}</h2><span class="date">{{ page.date | date_to_long_string }}</span>
+            <h2>{{page.title}}</h2><span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
           </div>
           <div class="box_content">{{content}}</div>
         </div>

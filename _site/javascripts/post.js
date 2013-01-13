@@ -40,7 +40,7 @@
 				};
 
 				var JSONP_URL = "//labs.bible.org/api/?passage="+encodeURIComponent(ref)+"&type=json&callback="+encodeURIComponent(callbackName)+"&formatting=para";
-				console.log(JSONP_URL);
+
 				var em_script = $("<script>").attr('src', JSONP_URL);
 
 				$(document.head).append(em_script);
@@ -128,13 +128,15 @@ function _jsonp_embeded_passage_text(verses, ref) {
 	}
 
 	var embed = $("<div>").addClass("embedded-verse");
-	$(embed).append("<p>"+passageHTML+"</p>");
+	var passage = $("<p />");
+	$(passage).append($(passageHTML));
+	$(embed).append(passage);
 	$(embed).append("<span class='passage_description'>"+ ref.replace(/\|/g, " ")+"</span>");
 
 	var real_ref = ref.replace(/:/g, "\\:").replace(/\|/g, "\\|");
 
 	$(embed).find("a").remove();
-	fixVerseNumPositions($(embed));
+	fixVerseNumPositions($(embed).children("p"));
 
 	$("code."+real_ref).replaceWith(embed);
 }

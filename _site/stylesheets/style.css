@@ -77,18 +77,24 @@ div#header {
 /** Post **/
 
 .box_head {
-    background: -webkit-linear-gradient(#DDDDDD,#CCCCCC);
-    background: -moz-linear-gradient(#eeedeb,#dddcda);
-    background: -o-linear-gradient(#eeedeb,#dddcda);
-    background: linear-gradient(#eeedeb,#dddcda);
+    background: -webkit-linear-gradient(#EEEEEE, #CCCCCC);
+    background: -moz-linear-gradient(#EEEEEE, #CCCCCC);
+    background: -o-linear-gradient(#EEEEEE, #CCCCCC);
+    background: linear-gradient(#EEEEEE, #CCCCCC);
     padding: 8px 0 8px 0;
     box-shadow: 0 2px 2px #AAAAAA;
+    -webkit-box-shadow: 0 2px 2px #AAAAAA;
+    -moz-box-shadow: 0 2px 2px #AAAAAA;
+    -o-box-shadow: 0 2px 2px #AAAAAA;
 }
 
 .box_head h2 {
     display: inline-block;
     color: #666666;
     text-shadow: 1px 1px 1px #EEEEEE;
+    -moz-text-shadow: 1px 1px 1px #EEEEEE;
+    -webkit-text-shadow: 1px 1px 1px #EEEEEE;
+    -o-text-shadow: 1px 1px 1px #EEEEEE;
     font-size: 1em;
     margin: 0 15px 0 15px;
 }
@@ -117,8 +123,14 @@ div#header {
     height: 100%;
     overflow: scroll;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
     border: 1px solid #BBBBBB;
     box-shadow: 0 0 2px #CCCCCC;
+    -webkit-box-shadow: 0 0 2px #CCCCCC;
+    -moz-box-shadow: 0 0 2px #CCCCCC;
+    -o-box-shadow: 0 0 2px #CCCCCC;
     background-color: white;
 }
 
@@ -142,8 +154,14 @@ div#header {
     height: 100%;
     overflow: scroll;
     border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
     border: 1px solid #BBBBBB;
     box-shadow: 0 0 2px #CCCCCC;
+    -moz-box-shadow: 0 0 2px #CCCCCC;
+    -webkit-box-shadow: 0 0 2px #CCCCCC;
+    -o-box-shadow: 0 0 2px #CCCCCC;
     background-color: #F0F0F0;
     color: #555555;
 }

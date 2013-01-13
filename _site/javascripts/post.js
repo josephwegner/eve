@@ -177,6 +177,6 @@ function _jsonp_main_passage_text(verses) {
 	$("#bible .box_content").html(bibleHTML);
 	$("#bible a").remove();
 
-	fixVerseNumPositions($("#bible"));
+	fixVerseNumPositions($("#bible .box_content"));
 	bindPostAnchors();
 }
